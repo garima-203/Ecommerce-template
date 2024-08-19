@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/3.0.0/pure-min.css"
+        integrity="sha512-X2yGIVwg8zeG8N4xfsidr9MqIfIE8Yz1It+w2rhUJMqxUwvbVqC5OPcyRlPKYOw/bsdJut91//NO9rSbQZIPRQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../Assets/dist/css/style.css">
+</head>
+
+<body style="background-color: #f2f6fa;">
+
+    <div id="loading-spinner" class="spinner mt-5">
+        <img src="../Assets/img/X-logo.png" alt="" width="20px">
+    </div>
+
+    <div id="main-content" style="display: none;">
+
+        <!--========================NAVBAR STARTS=============================-->
+        <!-------------NAV for small screen Start----------------->
+        <nav class="navbar bg-body-tertiary bg-primary d-block d-lg-none fixed-top mb-5">
+            <div class="container-fluid">
+                <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"
+                    style="border: none;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title logo text-center" id="offcanvasNavbarLabel"
+                            style=" color: #f1598c; font-size: 30px;">elite<img src="../Assets/img/X-logo.png" alt=""
+                                width="40px" height="40px"></h5>
+                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link category-link fw-bold" href="../index.html"
+                                    data-category="women">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category-link fw-bold" href="products.html"
+                                    data-category="women">Women</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category-link fw-bold" href="products.html"
+                                    data-category="men">Men</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category-link fw-bold" href="products.html"
+                                    data-category="kids">Kids</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category-link fw-bold" href="products.html"
+                                    data-category="grocery">Grocery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category-link fw-bold" href="products.html"
+                                    data-category="appliances">Appliances</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category-link fw-bold" href="products.html"
+                                    data-category="furniture">Furniture</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category-link fw-bold" href="products.html"
+                                    data-category="beauty">Beauty</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category-link fw-bold" href="products.html"
+                                    data-category="accessories">Accessories</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    More
+                                </a>
+                                <ul class="dropdown-menu mx-5 bg-light">
+                                    <li><a class="dropdown-item" href="#">Customer Service</a></li>
+                                    <li><a class="dropdown-item" href="#">Terms & conditions</a></li>
+                                    <li><a class="dropdown-item" href="#">Coupons</a></li>
+                                    <li><a class="dropdown-item" href="#"> Gifts&cards</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <form class="d-flex">
+                    <li class="nav-item dropdown list-unstyled mx-2">
+                        <a class="nav-link fa-solid fa-filter icon h4" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"></a>
+                        <ul class="dropdown-menu mt-3  dropdown-menu-center">
+                            <li>
+                                <div class="mb-3">
+                                    <h6 class="filter-label">Sort by Rating</h6>
+                                    <select id="ratingFilter" class="form-select" aria-label="Select Rating">
+                                        <option value="5">5 star & above</option>
+                                        <option value="4">4 star & above</option>
+                                        <option value="3">3 star & above</option>
+                                        <option value="2">2 star & above</option>
+                                    </select>
+                                </div>
+
+                            </li>
+                            <li>
+                                <div class="mb-3">
+                                    <h6 class="filter-label">Sort by Collection</h6>
+                                    <select id="collectionFilter" class="form-select" aria-label="Select Collection">
+                                        <option value="new">New Arrivals</option>
+                                        <option value="trend">Latest Trend</option>
+                                        <option value="high">Price High to Low</option>
+                                        <option value="low">Price Low to High</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mb-3">
+                                    <h6 class="filter-label">Sort by Discount</h6>
+                                    <select id="discountFilter" class="form-select" aria-label="Select Discount">
+                                        <option value="0">No Discount</option>
+                                        <option value="10">10% or more</option>
+                                        <option value="20">20% or more</option>
+                                        <option value="30">30% or more</option>
+                                        <option value="50">50% or more</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mb-3">
+                                    <h6 class="filter-label">Sort by Availability</h6>
+                                    <select id="availabilityFilter" class="form-select" aria-label="Select Availability">
+                                        <option value="all">All</option>
+                                        <option value="in_stock">In Stock</option>
+                                        <option value="pre_order">Pre-Order</option>
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <a class="nav-link active" aria-current="page" href="#" href="#" data-bs-toggle="modal"
+                        data-bs-target="#authModal"><i class="fa-regular fa-user icon"></i></a>
+                    <a class="nav-link mx-3" href="#" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+                        aria-controls="staticBackdrop">
+                        <i class="fas fa-cart-shopping icon"></i>
+                    </a>
+                    <a href="../src/like.html"><i class="fa-regular fa-heart icon h4"></i></a>
+
+                </form>
+            </div>
+        </nav>
+        <!-----------NAV for small screen End--------------------->
+        <!-----------NAV for large screen Start-------------------->
+        <nav class="navbar navbar-expand-lg d-none d-lg-block bg-white">
+            <div class="container-fluid">
+                <h5 class="logo text-center mx-5" style=" color: #f1598c; font-size: 50px;">elite<img
+                        src="../Assets/img/X-logo.png" alt="" width="40px" height="40px"></h5>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-flex align-items-center" id="navbarNav">
+                    <form class="d-flex mx-auto bg-light" role="search" style="padding-left: 10px;padding-right: 10px;">
+                        <input class="form-control me-2 shadow-none" type="search" placeholder="Search"
+                            aria-label="Search" style="border: none;background: none;">
+                        <span class="btn fa-solid fa-magnifying-glass"></span>
+                    </form>
+                    <ul class="navbar-nav ms-auto navList">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" aria-current="page" href="#" href="#" data-bs-toggle="modal"
+                                data-bs-target="#authModal"><i class="fa-regular fa-user icon"></i></a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+                                aria-controls="staticBackdrop">
+                                <i class="fas fa-cart-shopping icon"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="../src/like.html"><i class="fa-regular fa-heart icon"></i></a>
+                        </li>
+
+                        <li class="nav-item dropdown mx-4">
+                            <a class="nav-link fas fa-ellipsis-v mx-3 icon text-black" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"></a>
+                            <ul class="dropdown-menu mt-3  dropdown-menu-center">
+                                <li><a class="dropdown-item" href="#">Customer Service</a></li>
+                                <li><a class="dropdown-item" href="#">Terms & conditions</a></li>
+                                <li><a class="dropdown-item" href="#">Coupons</a></li>
+                                <li><a class="dropdown-item" href="#"> Gifts&cards</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!---------------------Wishlist Offcanvas start---------------------------->
+        <!-- Wishlist Offcanvas -->
+        <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+            aria-labelledby="staticBackdropLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="staticBackdropLabel">Wishlist</h5>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <!-- Wishlist Items Container -->
+                <div id="cart-items">
+                    <!-- Wishlist items will be dynamically injected here -->
+                </div>
+                <!-- Summary Section -->
+                <div id="cart-summary" class="mt-3">
+                    <h6 class="mb-2">Summary</h6>
+                    <div id="cart-summary">
+                        <p id="cart-total">Total: ₹0</p>
+                    </div>
+                    <button id="checkout-btn" class="btn mt-2">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+        <!-- Toast Notification -->
+        <div class="toast-container position-center bottom-0 end-0 p-3">
+            <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <div class="toast-body"></div>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+        <!---------------------Wishlist Offcanvas end---------------------------->
+
+        <nav class="navbar main-card navbar-expand-lg d-none d-lg-block bg-white mb-4 border-top">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse align-items-center justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav d-flex flex-nowrap justify-content-center w-100">
+                        <li class="nav-item d-flex flex-column align-items-center flex-grow-1" style="min-width: 60px;">
+                            <a class="nav-link category-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item d-flex flex-column align-items-center flex-grow-1" style="min-width: 60px;">
+                            <a class="nav-link category-link" href="products.html" data-category="grocery">Grocery</a>
+                        </li>
+                        <li class="nav-item d-flex flex-column align-items-center flex-grow-1" style="min-width: 60px;">
+                            <a class="nav-link category-link" href="products.html"
+                                data-category="appliances">Appliances</a>
+                        </li>
+                        <li class="nav-item d-flex flex-column align-items-center flex-grow-1" style="min-width: 60px;">
+                            <a class="nav-link category-link" href="products.html" data-category="gadgets">Gadgets</a>
+                        </li>
+                        <li class="nav-item d-flex flex-column align-items-center flex-grow-1" style="min-width: 60px;">
+                            <a class="nav-link category-link" href="products.html" data-category="women">Women</a>
+                        </li>
+                        <li class="nav-item d-flex flex-column align-items-center flex-grow-1" style="min-width: 60px;">
+                            <a class="nav-link category-link" href="products.html" data-category="men">Men</a>
+                        </li>
+                        <li class="nav-item d-flex flex-column align-items-center flex-grow-1" style="min-width: 60px;">
+                            <a class="nav-link category-link" href="products.html" data-category="kids">Kids</a>
+                        </li>
+                        <li class="nav-item d-flex flex-column align-items-center flex-grow-1" style="min-width: 60px;">
+                            <a class="nav-link category-link" href="products.html"
+                                data-category="furniture">Furniture</a>
+                        </li>
+                        <li class="nav-item d-flex flex-column align-items-center flex-grow-1" style="min-width: 60px;">
+                            <a class="nav-link category-link" href="products.html" data-category="beauty">Beauty</a>
+                        </li>
+                        <li class="nav-item d-flex flex-column align-items-center flex-grow-1" style="min-width: 60px;">
+                            <a class="nav-link category-link" href="products.html"
+                                data-category="accessories">Accessories</a>
+                        </li>
+                        <li class="nav-item dropdown mx-4">
+                            <a class="nav-link fa-solid fa-filter icon h4 mx-3" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false"></a>
+                            <ul class="dropdown-menu mt-3 dropdown-menu-center p-3">
+                                <li>
+                                    <div class="mb-3">
+                                        <h6 class="filter-label">Sort by Rating</h6>
+                                        <select id="ratingFilter" class="form-select" aria-label="Select Rating">
+                                            <option value="5">5 star & above</option>
+                                            <option value="4">4 star & above</option>
+                                            <option value="3">3 star & above</option>
+                                            <option value="2">2 star & above</option>
+                                        </select>
+                                    </div>
+    
+                                </li>
+                                <li>
+                                    <div class="mb-3">
+                                        <h6 class="filter-label">Sort by Collection</h6>
+                                        <select id="collectionFilter" class="form-select" aria-label="Select Collection">
+                                            <option value="new">New Arrivals</option>
+                                            <option value="trend">Latest Trend</option>
+                                            <option value="high">Price High to Low</option>
+                                            <option value="low">Price Low to High</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="mb-3">
+                                        <h6 class="filter-label">Sort by Discount</h6>
+                                        <select id="discountFilter" class="form-select" aria-label="Select Discount">
+                                            <option value="0">No Discount</option>
+                                            <option value="10">10% or more</option>
+                                            <option value="20">20% or more</option>
+                                            <option value="30">30% or more</option>
+                                            <option value="50">50% or more</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="mb-3">
+                                        <h6 class="filter-label">Sort by Availability</h6>
+                                        <select id="availabilityFilter" class="form-select" aria-label="Select Availability">
+                                            <option value="all">All</option>
+                                            <option value="in_stock">In Stock</option>
+                                            <option value="pre_order">Pre-Order</option>
+                                        </select>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-------------NAV for large screen end-------------------->
+
+        <!---------------------MODAL START----------------------------------->
+        <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="authModalLabel">Login</h5>
+                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Login Form -->
+                        <div id="loginForm">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="loginEmail" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="loginEmail"
+                                        placeholder="Enter your email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="loginPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="loginPassword"
+                                        placeholder="Enter your password">
+                                </div>
+                                <button type="submit" class="btn">Login</button>
+                            </form>
+                            <p class="mt-3">Don't have an account? <a href="#" id="showSignup">Sign Up</a></p>
+                        </div>
+
+                        <!-- Signup Form-->
+                        <div id="signupForm" class="d-none">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="signupEmail" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="signupEmail"
+                                        placeholder="Enter your email">
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="mb-3">
+                                            <label for="signupPassword" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="signupPassword"
+                                                placeholder="Create a password">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="mb-3">
+                                            <label for="signupConfirmPassword" class="form-label">Confirm
+                                                Password</label>
+                                            <input type="password" class="form-control" id="signupConfirmPassword"
+                                                placeholder="Confirm your password">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn">Sign Up</button>
+                            </form>
+                            <p class="mt-3">Already have an account? <a href="#" id="showLogin">Login</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------MODAL START----------------------------------->
+        <!--========================NAVBAR ends=============================-->
+
+      
+                <!--Card start--> 
+                    <div class="row mx-0" id="product-cards">
+                        <!-- Cards will be injected here -->
+                    </div> 
+                <!--Card end--> 
+
+
+                <footer class="footer">
+                    <div class="container mt-5 p-5">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <h6>About</h6> 
+                                    <ul class="list-unstyled"> 
+                                        <li class="mb-2"><a href="#" class="text-decoration-none">Contact Us</a></li>
+                                        <li class="mb-2"><a href="#" class="text-decoration-none">About Us</a></li>
+                                        <li class="mb-2"><a href="#" class="text-decoration-none">Business</a></li>
+                                        <li class="mb-2"><a href="#" class="text-decoration-none">Flipkart Store</a></li>
+                                        <li class="mb-2"><a href="#" class="text-decoration-none">Blogs</a></li>
+                                    </ul> 
+                            </div>
+                            <div class="col-md-2">
+                                <h6>Help</h6> 
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><a href="#" class="text-decoration-none">Payment</a></li>
+                                        <li class="mb-2"><a href="#" class="text-decoration-none">Shipping</a></li>
+                                        <li class="mb-2"><a href="#" class="text-decoration-none">Cancelation & Returns</a></li>
+                                        <li class="mb-2"><a href="#" class="text-decoration-none">FAQ</a></li>
+                                        <li class="mb-2"><a href="#" class="text-decoration-none">Help</a></li>
+                                    </ul> 
+                            </div>
+                            <div class="col-md-2">
+                                <h6>Brand Partners</h6> 
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><a href="#" class="text-decoration-none">Nike</a></li>
+                                        <li class="mb-2"><a href="#" class="text-decoration-none">Samsung</a></li>
+                                        <li class="mb-2"><a href="#" class="text-decoration-none">Zara</a></li>
+                                        <li class="mb-2"><a href="#" class="text-decoration-none">boAt</a></li>
+                                        <li class="mb-2"><a href="#" class="text-decoration-none">Lakme</a></li>
+                                    </ul> 
+                            </div>
+                            <div class="col-md-2">
+                                <h6 class="heading-2">Connect Us</h6>
+                                <ul class="footer-social list-unstyled">
+                                    <li><a href="#"><span class="fa-brands fa-x-twitter mx-2 mt-1 h5"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-facebook mx-2 mt-1 h5"></span></a></li> 
+                                    <li><a href="#"><span class="fab fa-youtube mx-2 mt-1 h5"></span></a></li>
+                                </ul> 
+                            </div>
+                            <div class="col-md-3">
+                                <h6 class="heading-2">Address</h6>
+                                <p>eliteX </p>
+                                <p>123 Near Ram Ji Hospital Sahar Road , New Delhi  </p>
+                                <p>Phone: +9122332211, +9112332244 </p>
+                                <p>Email: eliteXhelp@gmail.com</p>
+                            </div>
+                            
+                        </div>
+                        <hr>
+                        <div class="row mt-4 justify-content-center align-items-center">
+                            <div class="col-md-3 text-center border-end">
+                                <p>&copy; 2024 eliteX. All Rights Reserved.</p>
+                            </div>
+                            <div class="col-md-2 text-center">
+                                <p>Terms & conditions</p> 
+                            </div> 
+                        </div>
+                    </div>
+                </footer> 
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/fontawesome.min.js"></script>
+    <script src="../Assets/JS/script.js"></script>
+
+</body>
+
+</html>

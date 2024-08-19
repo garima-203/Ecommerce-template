@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/3.0.0/pure-min.css"
+        integrity="sha512-X2yGIVwg8zeG8N4xfsidr9MqIfIE8Yz1It+w2rhUJMqxUwvbVqC5OPcyRlPKYOw/bsdJut91//NO9rSbQZIPRQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./Assets/dist/css/style.css">
+    <title>Document</title>
+
+</head>
+
+<body style="background-color: #f2f6fa;">
+
+
+    <div id="loading-spinner" class="spinner mt-5" style="background: none; border: none;">
+        <img src="./Assets/img/X-logo.png" alt="" width="20px">
+    </div>
+
+
+    <div id="main-content" style="display: none;">
+        <!--========================NAVBAR STARTS=============================-->
+        <!-------------NAV for small screen Start----------------->
+        <nav class="navbar bg-body-tertiary bg-primary d-block d-lg-none fixed-top">
+            <div class="container-fluid">
+                <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"
+                    style="border: none;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title logo text-center" id="offcanvasNavbarLabel"
+                            style=" color: #f1598c; font-size: 30px;">elite<img src="./Assets/img/X-logo.png" alt=""
+                                width="40px" height="40px"></h5>
+                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link category-link fw-bold" href="./index.html"
+                                    data-category="women">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category-link fw-bold" href="./src/products.html"
+                                    data-category="women">Women</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category-link fw-bold" href="./src/products.html"
+                                    data-category="men">Men</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category-link fw-bold" href="./src/products.html"
+                                    data-category="kids">Kids</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category-link fw-bold" href="./src/products.html"
+                                    data-category="grocery">Grocery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category-link fw-bold" href="./src/products.html"
+                                    data-category="appliances">Appliances</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category-link fw-bold" href="./src/products.html"
+                                    data-category="furniture">Furniture</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category-link fw-bold" href="./src/products.html"
+                                    data-category="beauty">Beauty</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category-link fw-bold" href="./src/products.html"
+                                    data-category="accessories">Accessories</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    More
+                                </a>
+                                <ul class="dropdown-menu mx-5 bg-light">
+                                    <li><a class="dropdown-item" href="#">Customer Service</a></li>
+                                    <li><a class="dropdown-item" href="#">Terms & conditions</a></li>
+                                    <li><a class="dropdown-item" href="#">Coupons</a></li>
+                                    <li><a class="dropdown-item" href="#"> Gifts&cards</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <form class="d-flex">
+                    <a class="nav-link active" aria-current="page" href="#" href="#" data-bs-toggle="modal"
+                        data-bs-target="#authModal"><i class="fa-regular fa-user icon"></i></a>
+                    <a class="nav-link mx-3" href="#" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+                        aria-controls="staticBackdrop">
+                        <i class="fas fa-cart-shopping icon"></i>
+                    </a>
+                    <a class="mx-3" href="../src/like.html"><i class="fa-regular fa-heart icon h4"></i></a>
+                </form>
+            </div>
+        </nav>
+        <!-----------NAV for small screen End--------------------->
+
+        <!-----------NAV for large screen Start-------------------->
+        <nav class="navbar navbar-expand-lg d-none d-lg-block bg-white">
+            <div class="container-fluid">
+                <h5 class="logo text-center mx-5" style=" color: #f1598c; font-size: 50px;">elite<img
+                        src="./Assets/img/X-logo.png" alt="" width="40px" height="40px"></h5>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-flex align-items-center" id="navbarNav">
+                    <form class="d-flex mx-auto bg-light" role="search" style="padding-left: 10px;padding-right: 10px;">
+                        <input class="form-control me-2 shadow-none" type="search" placeholder="Search"
+                            aria-label="Search" style="border: none;background: none;">
+                        <span class="btn fa-solid fa-magnifying-glass"></span>
+                    </form>
+                    <ul class="navbar-nav ms-auto navList">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" aria-current="page" href="#" href="#" data-bs-toggle="modal"
+                                data-bs-target="#authModal"><i class="fa-regular fa-user icon"></i></a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+                                aria-controls="staticBackdrop">
+                                <i class="fas fa-cart-shopping icon"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="./src/like.html"><i class="fa-regular fa-heart icon"></i></a>
+                        </li>
+                        <li class="nav-item dropdown mx-4">
+                            <a class="nav-link fas fa-ellipsis-v mx-3 icon text-black" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"></a>
+                            <ul class="dropdown-menu mt-3 dropdown-menu-center">
+                                <li><a class="dropdown-item" href="#">Customer Service</a></li>
+                                <li><a class="dropdown-item" href="#">Terms & conditions</a></li>
+                                <li><a class="dropdown-item" href="#">Coupons</a></li>
+                                <li><a class="dropdown-item" href="#"> Gifts&cards</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!---------------------Wishlist Offcanvas start---------------------------->
+        <!-- Wishlist Offcanvas -->
+        <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+            aria-labelledby="staticBackdropLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="staticBackdropLabel">Wishlist</h5>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <!-- Wishlist Items Container -->
+                <div id="cart-items">
+                    <!-- Wishlist items will be dynamically injected here -->
+                </div>
+                <!-- Summary Section -->
+                <div id="cart-summary" class="mt-3">
+                    <h6 class="mb-2">Summary</h6>
+                    <div id="cart-summary">
+                        <p id="cart-total">Total: ₹0</p>
+                    </div>
+                    <button id="checkout-btn" class="btn mt-2">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+        <!-- Toast Notification -->
+        <div class="toast-container position-center bottom-0 end-0 p-3">
+            <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <div class="toast-body"></div>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+        <!---------------------Wishlist Offcanvas end---------------------------->
+
+        <nav class="navbar main-card navbar-expand-lg d-none d-lg-block bg-white m-3">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse align-items-center justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav d-flex flex-nowrap justify-content-center w-100">
+                        <li class="nav-item d-flex flex-column align-items-center flex-grow-1" style="min-width: 60px;">
+                            <a class="nav-link category-link" href="./src/products.html" data-category="grocery"><img
+                                    src="./Assets/img/grocerylogo.png" alt="" height="60px" width="60px"></a>
+                            <a class="nav-link category-link" href="./src/products.html"
+                                data-category="grocery">Grocery</a>
+                        </li>
+                        <li class="nav-item d-flex flex-column align-items-center flex-grow-1" style="min-width: 60px;">
+                            <a class="nav-link category-link" href="./src/products.html" data-category="appliances"><img
+                                    src="./Assets/img/appliancelogo.png" alt="" height="60px" width="60px"></a>
+                            <a class="nav-link category-link" href="./src/products.html"
+                                data-category="appliances">Appliances</a>
+                        </li>
+                        <li class="nav-item d-flex flex-column align-items-center flex-grow-1" style="min-width: 60px;">
+                            <a class="nav-link category-link" href="./src/products.html" data-category="gadgets"><img
+                                    src="./Assets/img/gadgetslogo.webp" alt="" height="60px" width="60px"></a>
+                            <a class="nav-link category-link" href="./src/products.html"
+                                data-category="gadgets">Gadgets</a>
+                        </li>
+                        <li class="nav-item d-flex flex-column align-items-center flex-grow-1" style="min-width: 60px;">
+                            <a class="nav-link category-link" href="./src/products.html" data-category="women"><img
+                                    src="./Assets/img/womenlogo.png" alt="" height="60px" width="60px"></a>
+                            <a class="nav-link category-link" href="./src/products.html" data-category="women">Women</a>
+                        </li>
+                        <li class="nav-item d-flex flex-column align-items-center flex-grow-1" style="min-width: 60px;">
+                            <a class="nav-link category-link" href="./src/products.html" data-category="men"><img
+                                    src="./Assets/img/menlogo.png" alt="" height="60px" width="60px"></a>
+                            <a class="nav-link category-link" href="./src/products.html" data-category="men">Men</a>
+                        </li>
+                        <li class="nav-item d-flex flex-column align-items-center flex-grow-1" style="min-width: 60px;">
+                            <a class="nav-link category-link" href="./src/products.html" data-category="kids"><img
+                                    src="./Assets/img/kidlogo.png" alt="" height="60px" width="60px"></a>
+                            <a class="nav-link category-link" href="./src/products.html" data-category="kids">Kids</a>
+                        </li>
+                        <li class="nav-item d-flex flex-column align-items-center flex-grow-1" style="min-width: 60px;">
+                            <a class="nav-link category-link" href="./src/products.html" data-category="furniture"><img
+                                    src="./Assets/img/furniturelogo.png" alt="" height="60px" width="60px"></a>
+                            <a class="nav-link category-link" href="./src/products.html"
+                                data-category="furniture">Furniture</a>
+                        </li>
+                        <li class="nav-item d-flex flex-column align-items-center flex-grow-1" style="min-width: 60px;">
+                            <a class="nav-link category-link" href="./src/products.html" data-category="beauty"><img
+                                    src="./Assets/img/beautylogo.png" alt="" height="60px" width="60px"></a>
+                            <a class="nav-link category-link" href="./src/products.html"
+                                data-category="beauty">Beauty</a>
+                        </li>
+                        <li class="nav-item d-flex flex-column align-items-center flex-grow-1" style="min-width: 60px;">
+                            <a class="nav-link category-link" href="./src/products.html"
+                                data-category="accessories"><img src="./Assets/img/accelogo.png" alt="" height="60px"
+                                    width="60px"></a>
+                            <a class="nav-link category-link" href="./src/products.html"
+                                data-category="accessories">Accessories</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-------------NAV for large screen end-------------------->
+        <!---------------------Wishlist Offcanvas start---------------------------->
+        <!-- Wishlist Offcanvas -->
+        <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+            aria-labelledby="staticBackdropLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="staticBackdropLabel">Wishlist</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <!-- Wishlist Items Container -->
+                <div id="cart-items">
+                    <!-- Wishlist items will be dynamically injected here -->
+                </div>
+                <!-- Summary Section -->
+                <div id="cart-summary" class="mt-3">
+                    <h6 class="mb-2">Summary</h6>
+                    <div id="cart-summary">
+                        <p id="cart-total">Total: ₹0</p>
+                    </div>
+                    <button id="checkout-btn" class="btn mt-2">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+        <!-- Toast Notification -->
+        <div class="toast-container position-center bottom-0 end-0 p-3">
+            <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <div class="toast-body"></div>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+        <!---------------------Wishlist Offcanvas end---------------------------->
+
+        <!-------------NAV for large screen end-------------------->
+
+
+        <!---------------------MODAL START----------------------------------->
+        <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="authModalLabel">Login</h5>
+                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Login Form -->
+                        <div id="loginForm">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="loginEmail" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="loginEmail"
+                                        placeholder="Enter your email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="loginPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="loginPassword"
+                                        placeholder="Enter your password">
+                                </div>
+                                <button type="submit" class="btn">Login</button>
+                            </form>
+                            <p class="mt-3">Don't have an account? <a href="#" id="showSignup">Sign Up</a></p>
+                        </div>
+
+                        <!-- Signup Form (Initially Hidden) -->
+                        <div id="signupForm" class="d-none">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="signupEmail" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="signupEmail"
+                                        placeholder="Enter your email">
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="mb-3">
+                                            <label for="signupPassword" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="signupPassword"
+                                                placeholder="Create a password">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="mb-3">
+                                            <label for="signupConfirmPassword" class="form-label">Confirm
+                                                Password</label>
+                                            <input type="password" class="form-control" id="signupConfirmPassword"
+                                                placeholder="Confirm your password">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn">Sign Up</button>
+                            </form>
+                            <p class="mt-3">Already have an account? <a href="#" id="showLogin">Login</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------MODAL START----------------------------------->
+
+        <!--========================NAVBAR ends=============================-->
+
+
+        <!--Top Banner start-->
+        <div id="carouselExampleAutoplaying" class="carousel slide mt-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./Assets/img/b1.jpg" class="d-block w-100" alt="..." height="500px" width="500px"
+                        style="max-height: 400px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="./Assets/img/b2.webp" class="d-block w-100" alt="..." height="500px" width="500px"
+                        style="max-height: 400px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="./Assets/img/b3.jpg" class="d-block w-100" alt="..." height="500px" width="500px"
+                        style="max-height: 400px;">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!--Top Banner ends-->
+        <div class="mx-md-4">
+
+            <!--=================Top FAshion Deal cards starts=========================-->
+            <section class="fashionDeal">
+                <!-------------small screen start---------->
+                <div class="card main-card mt-4 d-block d-md-none d-lg-none">
+                    <h1 class="mx-5">Top Fashion Deal </h1>
+                    <div class="card-body d-flex align-items-center">
+                        <a href=""><img src="https://m.media-amazon.com/images/I/41UI9EXrzbL.jpg" alt="" width="80px"
+                                height="auto" class="me-3 img-fluid"></a>
+                        <div>
+                            <a href="" class="text-decoration-none text-black">
+                                <p class="mb-0">Printed Women's Western Dress</p>
+                                <p class="fw-bold"><del class="fw-normal">₹ 4,999</del> ₹ 2,999</p>
+                                <p class="text-danger h6">50% OFF</p>
+                            </a>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <a href=""><img src="https://m.media-amazon.com/images/I/614JuuUmqGL._SX679_.jpg" alt=""
+                                width="80px" height="auto" class="me-3 img-fluid"></a>
+                        <div>
+                            <a href="" class="text-decoration-none text-black">
+                                <p class="mb-0">Mens Self Design Formal Three Piece</p>
+                                <p class="fw-bold"><del class="fw-normal">₹ 84,999</del> ₹ 79,999</p>
+                                <p class="text-danger h6">10% OFF</p>
+                            </a>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <a href=""><img src="https://m.media-amazon.com/images/I/71nPtynT8ZL._SY879_.jpg" alt=""
+                                width="80px" height="auto" class="me-3 img-fluid"></a>
+                        <div>
+                            <a href="" class="text-decoration-none text-black">
+                                <p class="mb-0">Baby Girl Embellished Dress</p>
+                                <p class="fw-bold"><del class="fw-normal">₹ 1,999</del> ₹ 1,500</p>
+                                <p class="text-danger h6">30% OFF</p>
+                            </a>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <a href=""><img src="https://images.meesho.com/images/products/302854220/x7jbd_512.webp" alt=""
+                                width="80px" height="auto" class="me-3 img-fluid"></a>
+                        <div>
+                            <a href="" class="text-decoration-none text-black">
+                                <p class="mb-0">KIDS COMBO DRESS BOY</p>
+                                <p class="fw-bold"><del class="fw-normal">₹ 1,599</del> ₹ 999</p>
+                                <p class="text-danger h6">30% OFF</p>
+                            </a>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <a href=""><img src="https://m.media-amazon.com/images/I/614QB20noeL._SY879_.jpg" alt=""
+                                width="80px" height="auto" class="me-3 img-fluid"></a>
+                        <div>
+                            <a href="" class="text-decoration-none text-black">
+                                <p class="mb-0">Women Cotton Bra Set</p>
+                                <p class="fw-bold"><del class="fw-normal">₹ 999</del> ₹ 599</p>
+                                <p class="text-danger h6">60% OFF</p>
+                            </a>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <a href=""><img src="https://m.media-amazon.com/images/I/516DPaWWvEL._SX679_.jpg" alt=""
+                                width="80px" height="auto" class="me-3 img-fluid"></a>
+                        <div>
+                            <a href="" class="text-decoration-none text-black">
+                                <p class="mb-0">Pure Cotton Men's Sleeveless Sando</p>
+                                <p class="fw-bold"><del class="fw-normal">₹ 999</del> ₹ 499</p>
+                                <p class="text-danger h6">70% OFF</p>
+                            </a>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <a href=""><img src="https://m.media-amazon.com/images/I/41kTx6eMvtL.jpg" alt="" width="80px"
+                                height="auto" class="me-3 img-fluid"></a>
+                        <div>
+                            <a href="" class="text-decoration-none text-black">
+                                <p class="mb-0">Kaniza Fancy & Comfortable Block Heel Sandal</p>
+                                <p class="fw-bold"><del class="fw-normal">₹ 999</del> ₹ 499</p>
+                                <p class="text-danger h6">70% OFF</p>
+                            </a>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                </div>
+
+                <!-------------small screen ends---------->
+                <!----------Large screen start------------>
+                <div class="card main-card mt-5 d-none d-md-block d-lg-block">
+                    <h1 class="mx-5">Top Fashion Deal </h1>
+                    <div class="card-body">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper ">
+                                <div class="card swiper-slide" style="width:min-content;">
+                                    <div class="card-body">
+                                        <a href=""><img src="https://m.media-amazon.com/images/I/41UI9EXrzbL.jpg" alt=""
+                                                width="80px" height="auto" class="me-3 img-fluid"></a>
+                                        <a href="" class="text-decoration-none text-black">
+                                            <p class="mb-0 text-truncate">Printed Women's Western Dress</p>
+                                            <p class="fw-bold"><del class="fw-normal">₹ 4,999</del> ₹ 2,999</p>
+                                            <p class="text-danger h6">50% OFF</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card swiper-slide" style="width:min-content;">
+                                    <div class="card-body">
+                                        <a href=""><img
+                                                src="https://m.media-amazon.com/images/I/614JuuUmqGL._SX679_.jpg" alt=""
+                                                width="110px" height="auto" class="me-3 img-fluid"></a>
+                                        <a href="" class="text-decoration-none text-black">
+                                            <p class="mb-0 text-truncate">Mens Self Design Three Piece</p>
+                                            <p class="fw-bold"><del class="fw-normal">₹ 84,999</del> ₹ 79,999</p>
+                                            <p class="text-danger h6">10% OFF</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card swiper-slide" style="width:min-content;">
+                                    <div class="card-body">
+                                        <a href=""><img
+                                                src="https://m.media-amazon.com/images/I/71nPtynT8ZL._SY879_.jpg" alt=""
+                                                width="80px" height="auto" class="me-3 img-fluid"></a>
+                                        <a href="" class="text-decoration-none text-black">
+                                            <p class="mb-0 text-truncate">Baby Girl Embellished Dress</p>
+                                            <p class="fw-bold"><del class="fw-normal">₹ 1,999</del> ₹ 1,500</p>
+                                            <p class="text-danger h6">30% OFF</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card swiper-slide" style="width:min-content;">
+                                    <div class="card-body">
+                                        <a href=""><img
+                                                src="https://images.meesho.com/images/products/302854220/x7jbd_512.webp"
+                                                alt="" width="70px" height="auto" class="me-3 img-fluid"></a>
+                                        <a href="" class="text-decoration-none text-black">
+                                            <p class="mb-0 text-truncate">KIDS COMBO DRESS BOY</p>
+                                            <p class="fw-bold"><del class="fw-normal">₹ 1,599</del> ₹ 999</p>
+                                            <p class="text-danger h6">30% OFF</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card swiper-slide" style="width:min-content;">
+                                    <div class="card-body">
+                                        <a href=""><img
+                                                src="https://m.media-amazon.com/images/I/516DPaWWvEL._SX679_.jpg" alt=""
+                                                width="105px" height="auto" class="me-3 img-fluid"></a>
+                                        <a href="" class="text-decoration-none text-black">
+                                            <p class="mb-0 text-truncate">Pure Cotton Men's Sleeveless Sando</p>
+                                            <p class="fw-bold"><del class="fw-normal">₹ 999</del> ₹ 499</p>
+                                            <p class="text-danger h6">70% OFF</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card swiper-slide" style="width:min-content;">
+                                    <div class="card-body">
+                                        <a href=""><img
+                                                src="https://m.media-amazon.com/images/I/614QB20noeL._SY879_.jpg" alt=""
+                                                width="70px" height="auto" class="me-3 img-fluid"></a>
+                                        <a href="" class="text-decoration-none text-black">
+                                            <p class="mb-0 text-truncate">Women Cotton Bra Set</p>
+                                            <p class="fw-bold"><del class="fw-normal">₹ 999</del> ₹ 599</p>
+                                            <p class="text-danger h6">60% OFF</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Navigation -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <!-----------Large screen ends-------------->
+            </section>
+            <!--=================Top FAshion Deal cards ends=========================-->
+
+            <!-- Featured Start -->
+            <section class="feature">
+                <div class="container-fluid pt-5">
+                    <div class="row px-xl-5 pb-3">
+                        <div class="col-lg-3 col-md-6 col-sm-12 pb-1 main">
+                            <div class="d-flex align-items-center bg-white mb-4" style="padding: 30px;">
+                                <h1 class="fa-solid fa-check icon m-1 mx-3"></h1>
+                                <h5 class="font-weight-semi-bold m-0">Quality Product</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                            <div class="d-flex align-items-center bg-white mb-4" style="padding: 30px;">
+                                <h1 class="fa-solid fa-truck-pickup icon m-1 mx-3"></h1>
+                                <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                            <div class="d-flex align-items-center bg-white mb-4" style="padding: 30px;">
+                                <h1 class="fas fa-exchange-alt icon m-1 mx-3"></h1>
+                                <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                            <div class="d-flex align-items-center bg-white mb-4" style="padding: 30px;">
+                                <h1 class="fa-solid fa-phone-volume icon m-1 mx-3"></h1>
+                                <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Featured End -->
+
+            <!--=================NEW ARRIVALS cards starts=========================-->
+            <section class="NA">
+                <!--product showcase card starts-->
+                <div class="card main-card mt-3">
+                    <div class="d-md-flex">
+                        <div class="card-body col-lg-5 col-md-4">
+                            <img src="./Assets/img/off1.jpg" class="img-fluid" alt="" style="border-radius: 20px;">
+                        </div>
+                        <div class="card-body col-lg-5 col-md-4">
+                            <img src="./Assets/img/off2.jpg" class="img-fluid" alt="" style="border-radius: 20px;">
+                        </div>
+                        <div class="card-body col-lg-5 col-md-4">
+                            <img src="./Assets/img/off3.jpg" class="img-fluid" alt="" style="border-radius: 20px;">
+                        </div>
+                    </div>
+                </div>
+                <!--product showcase card ends-->
+                <!-------------small screen start---------->
+                <div class="card main-card mt-4 d-block d-md-none d-lg-none">
+                    <div class="d-flex align-items-center">
+                        <h1 class="mx-5">New Arrivals</h1>
+                    </div>
+
+                    <div class="card-body d-flex align-items-center">
+                        <img src="https://m.media-amazon.com/images/I/61TFl5B7WNL._SY879_.jpg" alt="" width="50px"
+                            height="auto" class="me-3">
+                        <div>
+                            <p class="mb-0">Women's Summer Dresses</p>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <img src="https://m.media-amazon.com/images/I/91-MomQ9xzL._SY879_.jpg" alt="" width="50px"
+                            height="auto" class="me-3">
+                        <div>
+                            <p class="mb-0">Men's Casual Shirts</p>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <img src="https://m.media-amazon.com/images/I/51lLuQK9qjL._SX679_.jpg" alt="" width="50px"
+                            height="auto" class="me-3">
+                        <div>
+                            <p class="mb-0">Unisex Sportswear</p>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <img src="https://m.media-amazon.com/images/I/81MhTJv-7lL._SY879_.jpg" alt="" width="50px"
+                            height="auto" class="me-3">
+                        <div>
+                            <p class="mb-0">Kids' Trendy Outfits</p>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <img src="https://static.helioswatchstore.com/media/catalog/product/cache/dd1c3400e344f54d12df823ec560a116/3/6/3600898_1.jpg"
+                            alt="" width="50px" height="auto" class="me-3">
+                        <div>
+                            <p class="mb-0">ACCESERIES</p>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <img src="https://www.glamnails.in/wp-content/uploads/2021/10/glam_mani_pedi_nail_polish_tan_04-1.jpg"
+                            alt="" width="50px" height="auto" class="me-3">
+                        <div>
+                            <p class="mb-0">BEAUTY</p>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <img src="https://m.media-amazon.com/images/I/71Yumf4LypL._SY695_.jpg" alt="" width="50px"
+                            height="auto" class="me-3">
+                        <div>
+                            <p class="mb-0">Footware Collections</p>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+
+                </div>
+                <!-------------small screen ends---------->
+                <!----------Large screen start------------>
+                <div class="row m-0">
+                    <div class="col-lg-8">
+                        <div class="card main-card mt-4 d-none d-md-block d-lg-block">
+                            <h1 class="mx-5">New Arrivals</h1>
+                            <div class="card-body">
+                                <div class=" swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="card swiper-slide" style="width:min-content;">
+                                            <div class="card-body">
+                                                <a href=""> <img
+                                                        src="https://m.media-amazon.com/images/I/61GVIykACNL._SX679_.jpg"
+                                                        alt="" width="95px" height="auto" class="me-3"></a>
+                                                <a href="" class="text-decoration-none text-black text-truncate">
+                                                    <p class="mb-0">Women's Dresses</p>
+                                                    <p class="text-danger h6">50% OFF</p>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card swiper-slide" style="width:min-content;">
+                                            <div class="card-body">
+                                                <a href=""><img
+                                                        src="https://m.media-amazon.com/images/I/91-MomQ9xzL._SY879_.jpg"
+                                                        alt="" width="70px" height="auto" class="me-3"></a>
+                                                <a href="" class="text-decoration-none text-black text-truncate">
+                                                    <p class="mb-0">Men's Casual Shirts</p>
+                                                    <p class="text-danger h6">30% OFF</p>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card swiper-slide" style="width:min-content;">
+                                            <div class="card-body">
+                                                <a href=""><img
+                                                        src="https://m.media-amazon.com/images/I/81MhTJv-7lL._SY879_.jpg"
+                                                        alt="" width="65px" height="auto" class="me-3"></a>
+                                                <a href="" class="text-decoration-none text-black text-truncate">
+                                                    <p class="mb-0">Kids' Trendy Outfits</p>
+                                                    <p class="text-danger h6">60% OFF</p>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card swiper-slide" style="width:min-content;">
+                                            <div class="card-body">
+                                                <a href=""><img
+                                                        src="https://static.helioswatchstore.com/media/catalog/product/cache/dd1c3400e344f54d12df823ec560a116/3/6/3600898_1.jpg"
+                                                        alt="" width="95px" height="auto" class="me-3"></a>
+                                                <a href="" class="text-decoration-none text-black text-truncate">
+                                                    <p class="mb-0">ACCESERIES</p>
+                                                    <p class="text-danger h6">50% OFF</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card swiper-slide" style="width:min-content;">
+                                            <div class="card-body">
+                                                <a href=""><img
+                                                        src="https://m.media-amazon.com/images/I/71Yumf4LypL._SY695_.jpg"
+                                                        alt="" width="95px" height="auto" class="me-3"></a>
+                                                <a href="" class="text-decoration-none text-black text-truncate">
+                                                    <p class="mb-0">Footware Collections</p>
+                                                    <p class="text-danger h6">40% OFF</p>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card swiper-slide" style="width:min-content;">
+                                            <div class="card-body">
+                                                <a href=""><img
+                                                        src="https://www.glamnails.in/wp-content/uploads/2021/10/glam_mani_pedi_nail_polish_tan_04-1.jpg"
+                                                        alt="" width="95px" height="auto" class="me-3"></a>
+                                                <a href="" class="text-decoration-none text-black text-truncate">
+                                                    <p class="mb-0">BEAUTY</p>
+                                                    <p class="text-danger h6">10% OFF</p>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Add Navigation -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-4 d-none d-md-block d-lg-block">
+                        <img src="./Assets/img/NA.jpg" alt="" class="img-fluid h-100" style="border-radius: 20px;">
+                    </div>
+                </div>
+                <!-----------Large screen ends-------------->
+            </section>
+            <!--=================NEW ARRIVALS cards ends=========================-->
+
+
+
+            <!--Middle Product Banner start-->
+            <div id="carouselExampleAutoplaying" class="carousel slide mt-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./Assets/img/p1.webp" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./Assets/img/p2.webp" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./Assets/img/p3.webp" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+            <!--Middle Product Banner ends-->
+
+
+            <!--Beauty Products start-->
+            <section class="beautyCard">
+                <div class="beautyCard row mx-0 mt-3 g-3 text-center">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="card main-card">
+                            <div class="card-body">
+                                <h4 class="text-center">Skincare Products</h4>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/5127oLThZNL._SX450_.jpg" alt=""
+                                                height="auto" width="100px">
+                                            <p>Moisturizers</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/51EU-WAMEQL._SY450_.jpg" alt=""
+                                                height="auto" width="100px">
+                                            <p>Serums</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/71JNvx2i7QL._SX679_.jpg" alt=""
+                                                height="auto" width="100px">
+                                            <p>Face Mist </p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/718OR4WvjHL._SY450_.jpg" alt=""
+                                                height="auto" width="100px">
+                                            <p>Masks</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="card main-card">
+                            <div class="card-body">
+                                <h4 class="text-center">Makeup</h4>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/51yRsJblpFL._SY450_.jpg" alt=""
+                                                height="auto" width="100x">
+                                            <p>Concealer</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/51ZtF7SAYqL._SY450_.jpg" alt=""
+                                                height="auto" width="100x">
+                                            <p>Makeup Fixer</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/516sxTaLmzL._SY450_.jpg" alt=""
+                                                height="auto" width="100x">
+                                            <p>Blusher</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/616kViYpgpL._SY450_.jpg" alt=""
+                                                height="auto" width="100x">
+                                            <p>Eyeshadow Palettes</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="card main-card">
+                            <div class="card-body">
+                                <h4 class="text-center">Haircare</h4>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/51Q33t+HFJL._SY450_.jpg" alt=""
+                                                width="100px" height="auto">
+                                            <p>Shampoos</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/51pWgQwbKPL._SY450_.jpg" alt=""
+                                                width="100px" height="auto">
+                                            <p>Conditioners</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/71lt7wHjFmL._SY450_.jpg" alt=""
+                                                width="100px" height="auto">
+                                            <p>Hair Oils</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/7111bgQl+uL._SX679_.jpg" alt=""
+                                                width="100px" height="auto">
+                                            <p>Styling Tools</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="card main-card">
+                            <div class="card-body">
+                                <h4 class="text-center">Men's Grooming</h4>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/71lHxEh-OFL._SX679_.jpg" alt=""
+                                                height="auto" width="100px">
+                                            <p>Shaving Cream</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/71YX7NsJihL._SX522_.jpg" alt=""
+                                                height="auto" width="100px">
+                                            <p>Beard Care</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/61Q8IfjuNXL._SX522_.jpg" alt=""
+                                                height="auto" width="100px">
+                                            <p>Skincare for Men</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/51M73SOIdhL._SX522_.jpg" alt=""
+                                                height="auto" width="100px">
+                                            <p>Fragrances for Men</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="card main-card">
+                            <div class="card-body">
+                                <h4 class="text-center">Fragrances</h4>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/711eP6dPXeL._SX522_.jpg" alt=""
+                                                height="auto" width="100px">
+                                            <p> Perfumes</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/41ok-Fy7WCL._SX522_.jpg" alt=""
+                                                height="auto" width="100px">
+                                            <p>Body Mists</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/81LCySRuA-L._SX679_.jpg" alt=""
+                                                height="auto" width="100px">
+                                            <p>Aromatherapy Oils</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/51uddH9TDoL._SX522_.jpg" alt=""
+                                                height="auto" width="100px">
+                                            <p>Fragrance Mists</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="card main-card">
+                            <div class="card-body">
+                                <h4 class="text-center">Travel-Sized Beauty</h4>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/71FF6ImjA4L._SX522_.jpg" alt=""
+                                                height="auto" width="100px">
+                                            <p>Mini Skincare</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/81xJr5oZqCL._SY679_.jpg" alt=""
+                                                height="auto" width="60px">
+                                            <p>Portable Makeup Kit</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/51k+uVgU2cL._SX679_.jpg" alt=""
+                                                height="auto" width="100px">
+                                            <p>Storage Bag </p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/51Q1+FBnWTL._SX522_.jpg" alt=""
+                                                height="auto" width="100px">
+                                            <p>Mini Makeup Brushes</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Beauty Products end-->
+
+            <!--=================mobiles starts=========================-->
+            <section class="mobiles">
+                <div class="card main-card mt-5">
+                    <div class="d-md-flex">
+                        <div class="card-body col-lg-8 col-md-4">
+                            <img src="./Assets/img/DoE1.webp" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-body col-lg-8 col-md-4">
+                            <img src="./Assets/img/DoE2.webp" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-body col-lg-8 col-md-4">
+                            <img src="./Assets/img/DoE3.webp" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-------------small screen start---------->
+                <div class="card main-card mt-4 d-block d-md-none d-lg-none">
+                    <h1 class="mx-4">Discount On Mobiles</h1>
+                    <div class="card-body d-flex align-items-center">
+                        <img src="https://m.media-amazon.com/images/I/61tXDIlLwmL._SX679_.jpg" alt="" width="100px"
+                            height="auto">
+                        <div>
+                            <h6>Samsung Galaxy A34 5G</h6>
+                            <p class="fw-bold"> ₹ 22,990 <br><del class="fw-normal">M.R.P.: ₹35,499</del></p>
+                            <p class="text-danger h6">45% OFF</p>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <img src="https://m.media-amazon.com/images/I/51dGqSFNrDL._SX679_.jpg" alt="" width="100px"
+                            height="auto">
+                        <div>
+                            <h6>POCO M6 Pro 5G</h6>
+                            <p class="fw-bold">₹ 10,499 <br><del class="fw-normal">M.R.P.: ₹16,999</del></p>
+                            <p class="text-danger h6">5% OFF</p>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <img src="https://m.media-amazon.com/images/I/712qzWNmjFL._SX679_.jpg" alt="" width="100px"
+                            height="auto">
+
+                        <div>
+                            <h6>realme NARZO 70 5G</h6>
+                            <p class="fw-bold"> ₹12,998 <br><del class="fw-normal">M.R.P.: ₹19,999</del></p>
+                            <p class="text-danger h6">35% OFF</p>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <img src="https://m.media-amazon.com/images/I/61l9ppRIiqL._SX679_.jpg" alt="" width="100px"
+                            height="auto">
+                        <div>
+                            <h6>Apple iPhone 13</h6>
+                            <p class="fw-bold"> ₹49,199<br><del class="fw-normal">M.R.P.: ₹59,600</del></p>
+                            <p class="text-danger h6">17% OFF</p>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <img src="https://m.media-amazon.com/images/I/61WZicN+coL._SX679_.jpg" alt="" height="auto"
+                            width="100px">
+                        <div>
+                            <h6>iQOO Z9 Lite 5G </h6>
+                            <p class="fw-bold"> ₹11,499<br><del class="fw-normal">M.R.P.: ₹15,499</del></p>
+                            <p class="text-danger h6">17% OFF</p>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                </div>
+                <!-------------small screen ends---------->
+                <!----------Large screen start------------>
+                <div class="card main-card mt-4 d-none d-md-block d-lg-block">
+                    <h1 class="mx-4">Discount On Mobiles</h1>
+                    <div class="card-body">
+                        <div class=" swiper-container">
+                            <div class="swiper-wrapper ">
+                                <div class="card swiper-slide m-2" style="width:15rem ;">
+                                    <div class="card-body">
+                                        <img src="https://m.media-amazon.com/images/I/61tXDIlLwmL._SX679_.jpg" alt=""
+                                            height="auto" width="225px">
+                                        <h6 class="text-truncate">Samsung Galaxy A34 5G</h6>
+                                        <p class="fw-bold"> ₹ 22,990 <br><del class="fw-normal">M.R.P.: ₹35,499</del>
+                                        </p>
+                                        <p class="text-danger h6">45% OFF</p>
+                                    </div>
+                                </div>
+                                <div class="card swiper-slide m-2" style="width:max-content">
+                                    <div class="card-body">
+                                        <img src="https://m.media-amazon.com/images/I/51dGqSFNrDL._SX679_.jpg" alt=""
+                                            height="auto" width="150px">
+                                        <h6 class="text-truncate">POCO M6 Pro 5G</h6>
+                                        <p class="fw-bold">₹ 10,499 <br><del class="fw-normal">M.R.P.: ₹16,999</del></p>
+                                        <p class="text-danger h6">5% OFF</p>
+                                    </div>
+                                </div>
+                                <div class="card swiper-slide m-2" style="width:max-content">
+                                    <div class="card-body">
+                                        <img src="https://m.media-amazon.com/images/I/712qzWNmjFL._SX679_.jpg" alt=""
+                                            height="auto" width="150px">
+                                        <h6 class="text-truncate">realme NARZO 70 5G</h6>
+                                        <p class="fw-bold"> ₹12,998 <br><del class="fw-normal">M.R.P.: ₹19,999</del></p>
+                                        <p class="text-danger h6">35% OFF</p>
+                                    </div>
+                                </div>
+                                <div class="card swiper-slide m-2" style="width:max-content">
+                                    <div class="card-body">
+                                        <img src="https://m.media-amazon.com/images/I/61l9ppRIiqL._SX679_.jpg" alt=""
+                                            height="auto" width="150px">
+                                        <h6 class="text-truncate">Apple iPhone 13</h6>
+                                        <p class="fw-bold"> ₹49,199<br><del class="fw-normal">M.R.P.: ₹59,600</del></p>
+                                        <p class="text-danger h6">17% OFF</p>
+                                    </div>
+                                </div>
+                                <div class="card swiper-slide m-2" style="width:max-content">
+                                    <div class="card-body">
+                                        <img src="https://m.media-amazon.com/images/I/61Io5-ojWUL._SX679_.jpg" alt=""
+                                            height="auto" width="150px">
+                                        <h6 class="text-truncate">OnePlus Nord CE4 Lite 5G </h6>
+                                        <p class="fw-bold"> ₹19,999<br><del class="fw-normal">M.R.P.: ₹20,999</del></p>
+                                        <p class="text-danger h6">17% OFF</p>
+                                    </div>
+                                </div>
+                                <div class="card swiper-slide m-2" style="width:max-content">
+                                    <div class="card-body">
+                                        <img src="https://m.media-amazon.com/images/I/61WZicN+coL._SX679_.jpg" alt=""
+                                            height="auto" width="150px">
+                                        <h6 class="text-truncate">iQOO Z9 Lite 5G </h6>
+                                        <p class="fw-bold"> ₹11,499<br><del class="fw-normal">M.R.P.: ₹15,499</del></p>
+                                        <p class="text-danger h6">17% OFF</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Add Navigation -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <!-----------Large screen ends-------------->
+
+            </section>
+            <!--=================mobiles ends=========================-->
+
+            <!--Phonepay card start-->
+            <div id="carouselExampleAutoplaying" class="carousel slide mt-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./Assets/img/phonepayCard.avif" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+            <!--Phonepay card ends-->
+
+            <!--Appliances card start-->
+            <section class="appliances">
+                <div class="row mx-0">
+                    <div class="col-lg-4 mt-3">
+                        <div class="card main-card">
+                            <div class="card-body">
+                                <h4>Dhamaka Offer On Home Appliances</h4>
+                                <div class="row mx-0 text-center">
+                                    <div class="col-lg-6 col-md-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/61aM36RGwgL._SX679_.jpg" alt=""
+                                                height="auto" width="120px">
+                                            <h6 class="text-truncate">Pigeon by Stovekraft Cruise 1800 watt Induction
+                                            </h6>
+                                            <p class="fw-bold"> ₹1,299<br><del class="fw-normal">M.R.P.: ₹3,193</del>
+                                            </p>
+                                            <p class="text-danger h6">55% OFF</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/71mL2bdyRdL._SX679_.jpg" alt=""
+                                                height="auto" width="120px">
+                                            <h6 class="text-truncate">Philips HL7756/01 750 Watt Mixer Grinder</h6>
+                                            <p class="fw-bold"> ₹2,999<br><del class="fw-normal">M.R.P.: ₹5,295</del>
+                                            </p>
+                                            <p class="text-danger h6">43% OFF</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/71vJLCZBeoL._SX679_.jpg" alt=""
+                                                height="auto" width="120px">
+                                            <h6 class="text-truncate">AGARO Marvel 9L Oven Toaster Griller</h6>
+                                            <p class="fw-bold"> ₹1,979<br><del class="fw-normal">M.R.P.: ₹2,799</del>
+                                            </p>
+                                            <p class="text-danger h6">29% OFF</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/414xkMgdaHL._SX300_SY300_QL70_FMwebp_.jpg"
+                                                alt="" height="auto" width="120px">
+                                            <h6 class="text-truncate">Butterfly EKN 1.8L 1500 Watt Electric Water Kettle
+                                            </h6>
+                                            <p class="fw-bold">₹₹749 <br><del class="fw-normal">M.R.P.: ₹1,400</del></p>
+                                            <p class="text-danger h6">5% OFF</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 mt-4">
+                        <img src="./Assets/img/Appliances.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </section>
+            <!--Appliances card end-->
+
+
+            <!--Electronics Items start-->
+            <section class="electronics mt-4">
+                <div class="card main-card">
+                    <div class="card-body">
+                        <h2>Best In Electronics</h2>
+                        <div class="row g-3 mx-0 text-center">
+                            <div class="col-lg-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/81Tfy967TKL._SX450_.jpg" alt=""
+                                                class="img-fluid" width="200px">
+                                            <h6 class="text-truncate">LG 80 cm (32 inches) HD Ready Smart LED TV</h6>
+                                            <p class="fw-bold"> ₹ 1,50,000 <br><del class="fw-normal">M.R.P ₹
+                                                    4,999</del>
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/71UTyXbUaxL._SX679_.jpg" alt=""
+                                                class="img-fluid" width="135px">
+                                            <h6 class="text-truncate">Noise Pulse 2 Max 1.85" Display, Bluetooth Calling
+                                                Smart Watch</h6>
+                                            <p class="fw-bold"> ₹1,099 <br><del class="fw-normal">M.R.P ₹6,999</del></p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/714gtA8+m3L._SX679_.jpg" alt=""
+                                                class="img-fluid" width="135px">
+                                            <h6 class="text-truncate">LG 9 Kg, 5 Star,Washing Machine, AI Direct Drive
+                                                Technology, Steam, 6 Motion DD & Wi-Fi Fully-Automatic Front Load
+                                                Washing Machine</h6>
+                                            <p class="fw-bold"> ₹40,990 <br><del class="fw-normal">M.R.P ₹53,990</del>
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/618cNlDLyZL._SX679_.jpg" alt=""
+                                                class="img-fluid" width="135px">
+                                            <h6 class="text-truncate">Haier 596L, 3-Star, Frost Free, 100% Convertible
+                                                Fridge Space, Expert Inverter 2-Door Side by Side Refrigerator,</h6>
+                                            <p class="fw-bold"> ₹ 1,50,000 <br><del class="fw-normal">M.R.P ₹
+                                                    4,999</del>
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/51l7ejCkTmL._SX679_.jpg" alt=""
+                                                class="img-fluid" width="135px">
+                                            <h6 class="text-truncate">GLEN 90 cm 1500m3/hr Auto-Clean Filterless Curved
+                                                Glass Kitchen Chimney</h6>
+                                            <p class="fw-bold"> ₹15,999 <br><del class="fw-normal">M.R.P ₹31,990</del>
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/61Ka87z2DSL._SX679_.jpg" alt=""
+                                                class="img-fluid" width="135px">
+                                            <h6 class="text-truncate">Lloyd 1.5 Ton 3 Star Inverter Split AC (5 in 1
+                                                Convertible, Copper, Anti-Viral + PM 2.5 Filter) 2023 Model</h6>
+                                            <p class="fw-bold"> ₹33,990 <br><del class="fw-normal">M.R.P ₹
+                                                    58,990</del>
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/61hD-fVYjcL._SX679_.jpg" alt=""
+                                                class="img-fluid" width="240px">
+                                            <h6 class="text-truncate">IFB 24 L Solo Microwave Oven (24PM2S, Silver, 69
+                                                Indian and Continental Auto Cook Recipes)</h6>
+                                            <p class="fw-bold"> ₹6,490<br><del class="fw-normal">M.R.P ₹8,790</del>
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href="" class="text-decoration-none text-black"><img
+                                                src="https://m.media-amazon.com/images/I/61djKQOM5CL._SX679_.jpg" alt=""
+                                                class="img-fluid" width="135px">
+                                            <h6 class="text-truncate">Bajaj PX97 Torque New 36L Personal Air Cooler For
+                                                Room| DuramarinePump</h6>
+                                            <p class="fw-bold"> ₹6,590 <br><del class="fw-normal">M.R.P ₹9,790</del>
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Electronics items end-->
+ 
+            <!--Others product start-->
+            <section class="other mt-5">
+                <div class="row mx-0 g-1">
+                    <div class="col-lg-3">
+                        <div class="card main-card">
+                            <div class="card-body">
+                                <h5>Kitchen Essentials</h5>
+                                <div class="row mx-0 g-4">
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/51sytbA6OXL._SX569_.jpg" alt=""
+                                            class="img-fluid" width="90px">
+                                        <h6>Cutlury Set</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/51Pnpo5ACqL.jpg" alt=""
+                                            class="img-fluid" width="90px">
+                                        <h6>Storage Shelf</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/41uEYdeM4NL._SX300_SY300_QL70_FMwebp_.jpg"
+                                            alt="" class="img-fluid" width="85px">
+                                        <h6>Soap Dispenser </h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/312ed-dZX2L._SX300_SY300_QL70_FMwebp_.jpg"
+                                            alt="" class="img-fluid" width="80px">
+                                        <h6>Kitchen Wiper</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card main-card">
+                            <div class="card-body">
+                                <h5>Home Decor & Furnishing</h5>
+                                <div class="row mx-0 g-3">
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/81eCQYj3-TL._SX679_.jpg" alt=""
+                                            class="img-fluid" width="70px">
+                                        <h6>Show Pieces</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/41GsC13K3MS.jpg" alt=""
+                                            class="img-fluid" width="70px">
+                                        <h6>Candle Holders</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/91OWEI7V00L._SY879_.jpg" alt=""
+                                            class="img-fluid" width="70px">
+                                        <h6>Window Curtains</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/31DtEbBvsrL.jpg" alt=""
+                                            class="img-fluid" width="70px">
+                                        <h6>Wall Shelves</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card main-card">
+                            <div class="card-body">
+                                <h5>Gifting Specials</h5>
+                                <div class="row mx-0 g-3">
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/61hIVSUUhcL._SX679_.jpg" alt=""
+                                            class="img-fluid" width="80px">
+                                        <h6>Coffee Mug</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/519mdAYKTQL._SY450_.jpg" alt=""
+                                            class="img-fluid" width="80px">
+                                        <h6>Perfumes</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/71nbOk-3qUL._SX569_.jpg" alt=""
+                                            class="img-fluid" width="80px">
+                                        <h6>Watch</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/51WKBQUtVKL._SY575_.jpg" alt=""
+                                            class="img-fluid" width="80px">
+                                        <h6>Silver Anklet</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card main-card">
+                            <div class="card-body">
+                                <h5>Basic House Items</h5>
+                                <div class="row mx-0 g-3">
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/71VSRq40YYL._SX569_.jpg" alt=""
+                                            class="img-fluid" width="90px">
+                                        <h6>Tool Kit</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/512IaIr9eSL._SY879_.jpg" alt=""
+                                            class="img-fluid" width="75px">
+                                        <h6>Drawers</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/71Z5PMAzwxL._SX569_.jpg" alt=""
+                                            class="img-fluid" width="70px">
+                                        <h6>Storage Box</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/51NySJkXkhL._SX466_.jpg" alt=""
+                                            class="img-fluid" width="70px">
+                                        <h6>Bulbs</h6>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="card main-card">
+                            <div class="card-body">
+                                <h5>Bathroom Accessories</h5>
+                                <div class="row mx-0 g-4">
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/81fzp1uOldL._SX679_.jpg" alt=""
+                                            class="img-fluid" width="90px">
+                                        <h6>Bathroom Shelf</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/61i1Iv1Vu5L._SX569_.jpg" alt=""
+                                            class="img-fluid" width="80px">
+                                        <h6>Liquid Storage</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/71v79TlhAgL._SX679_.jpg"
+                                            alt="" class="img-fluid" width="85px">
+                                        <h6>Toilet Paper Holder</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/51CHXgtWHyL._SX679_.jpg"
+                                            alt="" class="img-fluid" width="80px">
+                                        <h6>Bucket</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="card main-card">
+                            <div class="card-body">
+                                <h5>Furnitures</h5>
+                                <div class="row mx-0 g-4">
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/71zLWdVcTaL._SX466_.jpg" alt=""
+                                            class="img-fluid" width="90px">
+                                        <h6>Folding Table</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/81cZrglhmYL._SX679_.jpg" alt=""
+                                            class="img-fluid" width="90px">
+                                        <h6>Pooja Stand</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/71p04klTqwL._SX679_.jpg"
+                                            alt="" class="img-fluid" width="85px">
+                                        <h6>Sofa</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/81yswKKDH3L._SX679_.jpg"
+                                            alt="" class="img-fluid" width="80px">
+                                        <h6>Cupboard</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card main-card">
+                            <div class="card-body">
+                                <h5>Under ₹99</h5>
+                                <div class="row mx-0 g-4">
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/6191vOhdx8L._SX679_.jpg" alt=""
+                                            class="img-fluid" width="90px">
+                                        <h6>Ice Face Roller</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/513jJVyjIiL._SX679_.jpg" alt=""
+                                            class="img-fluid" width="85px">
+                                        <h6>Container</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/51KZHoefaVL._SX466_PIbundle-3,TopRight,0,0_AA466SH20_.jpg"
+                                            alt="" class="img-fluid" width="80px">
+                                        <h6>Scrunchies</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/318e5TVuWyL._SX679_.jpg"
+                                            alt="" class="img-fluid" width="85px">
+                                        <h6>Adapter</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card main-card">
+                            <div class="card-body">
+                                <h5>Other Items</h5>
+                                <div class="row mx-0 g-4">
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/71aYGrOy6gL._SX679_.jpg" alt=""
+                                            class="img-fluid" width="90px">
+                                        <h6>Laptop Bags</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/81JhVNZ956L._SY450_.jpg" alt=""
+                                            class="img-fluid" width="90px">
+                                        <h6>Phone Cover</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/61VI+sDx5KL._SX569_.jpg"
+                                            alt="" class="img-fluid" width="85px">
+                                        <h6>Keyboard Protector</h6>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="https://m.media-amazon.com/images/I/71ZJ+xPVeCL._SX466_.jpg"
+                                            alt="" class="img-fluid" width="80px">
+                                        <h6>Phone Stand</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Others product end-->
+
+
+             <!--=================Headphones starts=========================-->
+             <section class="headphones"> 
+                <!-------------small screen start---------->
+                <div class="card main-card mt-4 d-block d-md-none d-lg-none">
+                    <h1 class="mx-4">Headphones</h1>
+                    <div class="card-body d-flex align-items-center">
+                        <img src="https://m.media-amazon.com/images/I/61XvYOrqVeL._SY450_.jpg" alt="" width="100px"
+                            height="auto">
+                        <div>
+                            <h6>boAt Rockerz 425 Headphones </h6>
+                            <p class="fw-bold"> ₹1,499 <br><del class="fw-normal">M.R.P.: ₹2,999</del></p>
+                            <p class="text-danger h6">50% OFF</p>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <img src="https://m.media-amazon.com/images/I/61+5q4oGJWL._SY450_.jpg" alt="" width="100px"
+                            height="auto">
+                        <div>
+                            <h6>ZEBRONICS Wired Earphones</h6>
+                            <p class="fw-bold">₹199 <br><del class="fw-normal">M.R.P.: ₹399</del></p>
+                            <p class="text-danger h6">55% OFF</p>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <img src="https://m.media-amazon.com/images/I/31hXqtvutdL._SX300_SY300_QL70_FMwebp_.jpg" alt="" width="100px"
+                            height="auto">
+
+                        <div>
+                            <h6>OnePlus Nord Buds 2r True Wireless in Ear Earbuds</h6>
+                            <p class="fw-bold"> ₹1,999 <br><del class="fw-normal">M.R.P.: ₹2,999</del></p>
+                            <p class="text-danger h6">65% OFF</p>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <img src="https://m.media-amazon.com/images/I/61+esOKPDVL._SY450_.jpg" alt="" width="100px"
+                            height="auto">
+                        <div>
+                            <h6>realme Bluetooth Neckband</h6>
+                            <p class="fw-bold"> ₹1,199<br><del class="fw-normal">M.R.P.: ₹3,600</del></p>
+                            <p class="text-danger h6">70% OFF</p>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                    <div class="card-body d-flex align-items-center">
+                        <img src="https://m.media-amazon.com/images/I/61ev0qhPNAL._SY450_.jpg" alt="" height="auto"
+                            width="100px">
+                        <div>
+                            <h6>Boult Audio Z60 Earbuds</h6>
+                            <p class="fw-bold"> ₹4,499<br><del class="fw-normal">M.R.P.: ₹5,499</del></p>
+                            <p class="text-danger h6">17% OFF</p>
+                        </div>
+                        <a href="" class="fas fa-arrow-right icon ms-auto text-decoration-none"></a>
+                    </div>
+                </div>
+                <!-------------small screen ends---------->
+                <!----------Large screen start------------>
+                <div class="card main-card mt-4 d-none d-md-block d-lg-block">
+                    <h1 class="mx-4">Headphonoes</h1>
+                    <div class="card-body">
+                        <div class=" swiper-container">
+                            <div class="swiper-wrapper ">
+                                <div class="card swiper-slide m-2" style="width:15rem ;">
+                                    <div class="card-body">
+                                        <img src="https://m.media-amazon.com/images/I/61XvYOrqVeL._SY450_.jpg" alt=""
+                                            height="auto" width="150px">
+                                        <h6 class="text-truncate">boAt Rockerz 425 Headphones </h6> 
+                                        <p class="fw-bold"> ₹1,499 <br><del class="fw-normal">M.R.P.: ₹2,999</del> 
+                                        </p>
+                                        <p class="text-danger h6">50% OFF</p>
+                                    </div>
+                                </div>
+                                <div class="card swiper-slide m-2" style="width:max-content">
+                                    <div class="card-body">
+                                        <img src="https://m.media-amazon.com/images/I/61+5q4oGJWL._SY450_.jpg" alt=""
+                                            height="auto" width="150px">
+                                        <h6 class="text-truncate">ZEBRONICS Zeb-Bro in Ear Wired Earphones</h6>
+                                        <p class="fw-bold">₹199 <br><del class="fw-normal">M.R.P.: ₹999</del></p>
+                                        <p class="text-danger h6">55% OFF</p>
+                                    </div>
+                                </div>
+                                <div class="card swiper-slide m-2" style="width:max-content">
+                                    <div class="card-body">
+                                        <img src="https://m.media-amazon.com/images/I/31hXqtvutdL._SX300_SY300_QL70_FMwebp_.jpg" alt=""
+                                            height="auto" width="150px">
+                                        <h6 class="text-truncate">OnePlus Nord Buds 2r True Wireless in Ear Earbuds</h6>
+                                        <p class="fw-bold"> ₹1,998 <br><del class="fw-normal">M.R.P.: ₹2,999</del></p>
+                                        <p class="text-danger h6">65% OFF</p>
+                                    </div>
+                                </div>
+                                <div class="card swiper-slide m-2" style="width:max-content">
+                                    <div class="card-body">
+                                        <img src="https://m.media-amazon.com/images/I/61+esOKPDVL._SY450_.jpg" alt=""
+                                            height="auto" width="150px">
+                                        <h6 class="text-truncate">realme Buds Wireless 3 Neo in Ear Bluetooth Neckband</h6>
+                                        <p class="fw-bold"> ₹1,298<br><del class="fw-normal">M.R.P.: ₹3,600</del></p>
+                                        <p class="text-danger h6">7% OFF</p>
+                                    </div>
+                                </div>
+                                <div class="card swiper-slide m-2" style="width:max-content">
+                                    <div class="card-body">
+                                        <img src="https://m.media-amazon.com/images/I/61bKM6CSSFL._SY450_.jpg" alt=""
+                                            height="auto" width="150px">
+                                        <h6 class="text-truncate">JBL C50HI, Wired in Ear Headphones </h6>
+                                        <p class="fw-bold"> ₹549<br><del class="fw-normal">M.R.P.: ₹999</del></p>
+                                        <p class="text-danger h6">21% OFF</p>
+                                    </div>
+                                </div>
+                                <div class="card swiper-slide m-2" style="width:max-content">
+                                    <div class="card-body">
+                                        <img src="https://m.media-amazon.com/images/I/61ev0qhPNAL._SY450_.jpg" alt=""
+                                            height="auto" width="150px">
+                                        <h6 class="text-truncate">Boult Audio Z60 Earbuds</h6>
+                                        <p class="fw-bold"> ₹4,299<br><del class="fw-normal">M.R.P.: ₹5,499</del></p>
+                                        <p class="text-danger h6">17% OFF</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Add Navigation -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <!-----------Large screen ends-------------->
+
+            </section>
+            <!--=================mobiles ends=========================-->
+ 
+        </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="container mt-5 p-5">
+            <div class="row">
+                <div class="col-md-2">
+                    <h6>About</h6> 
+                        <ul class="list-unstyled"> 
+                            <li class="mb-2"><a href="#" class="text-decoration-none">Contact Us</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none">About Us</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none">Business</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none">Flipkart Store</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none">Blogs</a></li>
+                        </ul> 
+                </div>
+                <div class="col-md-2">
+                    <h6>Help</h6> 
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#" class="text-decoration-none">Payment</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none">Shipping</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none">Cancelation & Returns</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none">FAQ</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none">Help</a></li>
+                        </ul> 
+                </div>
+                <div class="col-md-2">
+                    <h6>Brand Partners</h6> 
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#" class="text-decoration-none">Nike</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none">Samsung</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none">Zara</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none">boAt</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none">Lakme</a></li>
+                        </ul> 
+                </div>
+                <div class="col-md-2">
+                    <h6 class="heading-2">Connect Us</h6>
+                    <ul class="footer-social list-unstyled">
+                        <li><a href="#"><span class="fa-brands fa-x-twitter mx-2 mt-1 h5"></span></a></li>
+                        <li><a href="#"><span class="fab fa-facebook mx-2 mt-1 h5"></span></a></li> 
+                        <li><a href="#"><span class="fab fa-youtube mx-2 mt-1 h5"></span></a></li>
+                    </ul> 
+                </div>
+                <div class="col-md-3">
+                    <h6 class="heading-2">Address</h6>
+                    <p>eliteX </p>
+                    <p>123 Near Ram Ji Hospital Sahar Road , New Delhi  </p>
+                    <p>Phone: +9122332211, +9112332244 </p>
+                    <p>Email: eliteXhelp@gmail.com</p>
+                </div>
+                
+            </div>
+            <hr>
+            <div class="row mt-4 justify-content-center align-items-center">
+                <div class="col-md-3 text-center border-end">
+                    <p>&copy; 2024 eliteX. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-2 text-center">
+                    <p>Terms & conditions</p> 
+                </div> 
+            </div>
+        </div>
+    </footer> 
+
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/fontawesome.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./Assets/JS/script.js"></script>
+    <script src="./Assets/JS/swiper.js"></script>
+</body>
+
+</html>
