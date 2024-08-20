@@ -44,8 +44,8 @@ $(document).ready(function () {
         productContainer.empty();
         products.forEach(product => {
             const productCard = `
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center" style="padding: 0; padding: 0;">
-                    <div class="card main-card product-card mt-5 my-5 mt-lg-0" data-product='${JSON.stringify(product)}' style="width:min-content;border:none;margin: 0;">
+                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-center" style="padding: 0; padding: 0;">
+                    <div class="card main-card product-card my-2 mt-lg-0" data-product='${JSON.stringify(product)}' style="width:min-content;border:none;margin: 0;">
                         <div class="card-body text-center">
                             <img src="${product.main_image}" alt="${product.name}" width="200px" style="object-fit: contain;" height="200px">
                             <h5 class="mt-2 text-truncate" style="max-width: 200px;">${product.name}</h5>
@@ -97,8 +97,7 @@ $(document).ready(function () {
         productDetails.additional_images.forEach(image => {
             $('#product-additional-images').append(`<img src="${image}" alt="${productDetails.name}" class="img-thumbnail additional-image">`);
         });
-
-        // Change main image on mouseover
+ 
         $(document).on('mouseover', '.additional-image', function () {
             var newSrc = $(this).attr('src');
             $('#product-main-image').attr('src', newSrc);
@@ -156,7 +155,7 @@ $(document).ready(function () {
             }
 
             cartContainer.append(`
-                <div class="cart-item d-flex align-items-center mb-3">
+                <div class="cart-item d-flex align-items-center">
                     <img src="${item.main_image}" alt="${item.name}" class="img-thumbnail" width="80">
                     <div class="ms-3 flex-grow-1">
                         <h6 class="mb-1 text-truncate" style="max-width: 70px;">${item.name}</h6>
@@ -298,7 +297,7 @@ $(document).ready(function () {
             $('#liked-products-container').append(`
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card  main-card product-card" data-product='${JSON.stringify(product)}'>
-                        <img src="${product.main_image}" class="card-img-top" alt="${product.name}" width="200px" height="200px">
+                        <img src="${product.main_image}" class="card-img-top" alt="${product.name}" width="150px" height="150px">
                         <div class="card-body">
                             <h5 class="text-truncate">${product.name}</h5>
                             <p class="card-text">₹${product.price}</p>
