@@ -27,7 +27,7 @@ $(document).ready(function () {
 
     function fetchCategoryData(category) {
         $.ajax({
-            url: 'https://run.mocky.io/v3/d50c3633-c465-4992-8ead-21d6a29bd1a2',
+            url: 'https://garima-203.github.io/Ecom-Json/data.json',
             method: 'GET',
             success: function (data) {
                 const filteredData = data.filter(item => item.category.toLowerCase() === category.toLowerCase());
@@ -240,7 +240,7 @@ $(document).ready(function () {
     
     function fetchRelatedProducts() {
         $.ajax({
-            url: 'https://run.mocky.io/v3/d50c3633-c465-4992-8ead-21d6a29bd1a2',
+            url: 'https://garima-203.github.io/Ecom-Json/data.json',
             method: 'GET',
             success: function (data) {
                 console.log('Related products data:', data);
@@ -380,7 +380,7 @@ showLogin.addEventListener('click', function () {
 $(document).ready(function () {
     function fetchProductDetails() {
         $.ajax({
-            url: 'https://run.mocky.io/v3/d50c3633-c465-4992-8ead-21d6a29bd1a2',
+            url: 'https://garima-203.github.io/Ecom-Json/data.json',
             method: 'GET',
             success: function (response) {
                 console.log('API Response:', response);
